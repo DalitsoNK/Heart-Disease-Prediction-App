@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Heart Disease Prediction</title>
+  </head>
+  <link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/style.css')}}"
+/>
+  <body>
+    <div class="container">
+      <form
+        method="POST" action="{{url_for('patient_input')}}"
+      >
+        <h2>Patient Information</h2>
+
+        <input type="number" name="Age" id="Age" placeholder="Age" required />
+    
+        <input type="number" name="RestingBP" id="RestingBP" placeholder="Resting Blood Pressure" required />
+
+        <input type="number" name="Cholesterol" id="Cholesterol"placeholder="Cholesterol" required />
+
+        <select name="FastingBS" id="FastingBS" required>
+          <option value="" disabled selected>FastingBS</option>
+          <option value="1">1</option>
+          <option value="0">0</option>
+        </select>
+
+        <input type="number" name="MaxHR" id="MaxHR" Placeholder="Maximum Heart Rate Achieved" required />
+
+        <select name="Oldpeak" id="Oldpeak" Placeholder="Old Peak acheived" required>
+          <option value="" disabled selected>Old Peak acheived</option>
+          <option value="1">1</option>
+          <option value="1.5">1.5</option>
+          <option value="0">0</option>
+        </select>
+
+        <select name="Sex" id="Sex" required>
+          <option value="" disabled selected>Sex</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+
+        <select name="ChestPainType" id="ChestPainType" required>
+          <option value="" disabled selected>Chest Pain Type</option>
+          <option value="1">Typical Angina</option>
+          <option value="2">Atypical Angina</option>
+          <option value="3">Non-anginal Pain</option>
+          <option value="4">Asymptomatic</option>
+        </select>
+
+        <select name="RestingECG" id="RestingECG" required>
+          <option value="" disabled selected>Resting ECG</option>
+          <option value="0">Normal</option>
+          <option value="1">ST-T wave abnormality</option>
+          <option value="2">Left Ventricular Hypertrophy</option>
+        </select>
+
+        <select name="ExerciseAngina" id="ExerciseAngina" required>
+          <option value="" disabled selected>Exercise Angina</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+
+        <select name="ST_Slope" id="ST_Slope" required>
+          <option value="" disabled selected>ST Slope During Peak Exercise</option>
+          <option value="1">Up</option>
+          <option value="2">Flat</option>
+          <option value="3">Down</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
